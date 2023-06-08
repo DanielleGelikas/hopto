@@ -3,12 +3,7 @@ const url = 'https://api.instagram.com/oauth/authorize?client_id=547762730900603
 
 
 async function logJSONData() {
-  const response = await fetch(url, {
-    headers : { 
-      'Content-Type': 'application/json',
-      'Accept': 'application/json'
-     }
-  });
+  const response = await fetch(url);
   const jsonData = await response.json();
   console.log(jsonData);
 }
