@@ -32,5 +32,10 @@
     <div id="fb-root"></div>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/he_IL/sdk.js#xfbml=1&version=v17.0&appId=547762730900603&autoLogAppEvents=1" nonce="EKr2eAE4"></script>   
     <div class="fb-login-button" data-width="" data-size="" data-button-type="" data-layout="" data-auto-logout-link="false" data-use-continue-as="false"></div>
+    <script>
+     FB.getLoginStatus(function(response) {
+        statusChangeCallback(response);
+    });
+    </script>
 </body>
 </html>
