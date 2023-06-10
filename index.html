@@ -11,16 +11,19 @@
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/he_IL/sdk.js#xfbml=1&version=v17.0&appId=547762730900603&autoLogAppEvents=1" nonce="EKr2eAE4"></script>   
     <div class="fb-login-button" data-width="" data-size="" data-button-type="" data-layout="" data-auto-logout-link="false" data-use-continue-as="false"></div>
     <script>
-            window.fbAsyncInit = function() {
+    window.fbAsyncInit = function() {
       FB.init({
-        appId      : '{your-app-id}',
+        appId      : '547762730900603',
         cookie     : true,
         xfbml      : true,
-        version    : '{api-version}'
+        version    : 'v17.0'
       });
         
       FB.AppEvents.logPageView();   
-        
+      FB.getLoginStatus(function(response) {
+        statusChangeCallback(response);
+        console.log(response);
+    });
     };
   
     (function(d, s, id){
@@ -30,10 +33,7 @@
        js.src = "https://connect.facebook.net/en_US/sdk.js";
        fjs.parentNode.insertBefore(js, fjs);
      }(document, 'script', 'facebook-jssdk'));
-     FB.getLoginStatus(function(response) {
-        statusChangeCallback(response);
-        console.log(response);
-    });
+
     </script>
 </body>
 </html>
