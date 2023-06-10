@@ -8,7 +8,6 @@
 </head>
 <body>
     <div id="fb-root"></div>
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/he_IL/sdk.js#xfbml=1&version=v17.0&appId=547762730900603&autoLogAppEvents=1" nonce="EKr2eAE4"></script>   
     <div class="fb-login-button" data-width="" data-size="" data-button-type="" data-layout="" data-auto-logout-link="false" data-use-continue-as="false"></div>
     <script>
     window.fbAsyncInit = function() {
@@ -18,7 +17,6 @@
         xfbml      : true,
         version    : 'v17.0'
       });
-        
       FB.AppEvents.logPageView();   
       FB.getLoginStatus(function(response) {
         console.log(response);
@@ -32,7 +30,9 @@
        js.src = "https://connect.facebook.net/en_US/sdk.js";
        fjs.parentNode.insertBefore(js, fjs);
      }(document, 'script', 'facebook-jssdk'));
-
+     
     </script>
+     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/he_IL/sdk.js#xfbml=1&version=v17.0&appId=547762730900603&autoLogAppEvents=1" nonce="EKr2eAE4"></script>
+
 </body>
 </html>
